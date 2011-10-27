@@ -1,109 +1,31 @@
-; Drupal's .info files allow themers to easily specify some of the static
-; properties of your theme. Properties such as its name, stylesheets,
-; javascripts, and block regions.
-;
-; Drupal 7 stores a cache of the data in this .info files. If you modify any
-; lines in this file, you MUST refresh Drupal 7's cache by simply visiting the
-; Appearance page at admin/appearance.
 
+name = glendental
+description = Fusion sub-theme for Glenview Dental. Requires <a href="http://drupal.org/project/fusion">Fusion Core</a> and the <a href="http://drupal.org/project/skinr">Skinr</a> module to enable easy point-and-click theming.
+base theme = fusion_core
+core = 7.x
+engine = phptemplate
 
+stylesheets[all][] = css/glendental.css
 
-; The name, description and screenshot used for this theme on the Appearance
-; page at admin/appearance.
+skinr[api] = 2
+skinr[directory] = skins
 
-screenshot  = screenshot.png
-name        = Glendental
-description = A Zen sub-theme for Glenview Dental.
-
-
-
-; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
-
-core        = 7.x
-base theme  = zen
-
-
-
-; This section adds CSS files to your theme. A media type or a media query is
-; specified in the brackets. Typical CSS media types include "all", "screen",
-; "print", and "handheld". A typical media query is
-; "screen and (max-width: 320px)".
-;
-; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
-; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
-;
-; You can also override or remove any module's stylesheets, an extremely useful
-; feature. See the excellent Drupal 7 Theme Guide at
-; http://drupal.org/node/263967 for more details.
-
-stylesheets[all][] = css/html-reset.css
-stylesheets[all][] = css/wireframes.css
-stylesheets[all][] = css/layout-fixed.css
-stylesheets[all][] = css/page-backgrounds.css
-stylesheets[all][] = css/tabs.css
-stylesheets[all][] = css/pages.css
-stylesheets[all][] = css/blocks.css
-stylesheets[all][] = css/navigation.css
-stylesheets[all][] = css/views-styles.css
-stylesheets[all][] = css/nodes.css
-stylesheets[all][] = css/comments.css
-stylesheets[all][] = css/forms.css
-stylesheets[all][] = css/fields.css
-stylesheets[all][] = css/print.css
-
-; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
-; Instead, Zen now adds conditional-comment-included classes to the html
-; element, such as .ie6, .ie7, .ie8, .ie6-7, etc. More information on this
-; technique can be found at:
-; http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-;
-; If you still wish to use conditional stylesheets, you must install the
-; conditional stylesheets module: http://drupal.org/project/conditional_styles
-;stylesheets-conditional[lte IE 8][all][] = css/ie8.css
-
-
-
-; Optionally add some JavaScripts to your theme.
-
-;scripts[] = js/script.js
-
-
-
-; The regions defined in Zen's default page.tpl.php file.  The name in
-; brackets is the name of the region in the $page variable in the page.tpl.php
-; file, (e.g. "[navigation]" in the .info file means there will be a
-; $page['navigation'] variable in the page.tpl.php file.) The text after the
-; equals sign is a descriptive text used on the admin/structure/blocks page.
-;
-; To add a new region, copy Zen's page.tpl.php to your sub-theme's directory,
-; add a line line to this file, and then add the new $page['REGION'] variable
-; to your page.tpl.php template.
-
-regions[header]         = Header
-regions[navigation]     = Navigation bar
-regions[highlighted]    = Highlighted
-regions[help]           = Help
-regions[content]        = Content
-regions[sidebar_first]  = First sidebar
-regions[sidebar_second] = Second sidebar
-regions[footer]         = Footer
-regions[bottom]         = Page bottom
-
-; The page_top and page_bottom regions are hidden, which means they will not
-; show up on the blocks administration page. But they are required in order for
-; the html.tpl.php to work properly, so do not delete them.
-
-regions[page_top]       = Page top
-regions[page_bottom]    = Page bottom
-
-
-
-; Various page elements output by the theme can be toggled on and off. The
-; "features" control which of these check boxes display on the
-; admin/appearance config page. This is useful for suppressing check boxes
-; for elements not used by your sub-theme. To suppress a check box, omit the
-; entry for it below. See the Drupal 7 Theme Guide for more info:
-; http://drupal.org/node/171205#features
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[header_top] = Header top
+regions[header] = Header
+regions[main_menu] = Main menu
+regions[preface_top] = Preface top
+regions[preface_bottom] = Preface bottom
+regions[content] = Content
+regions[postscript_top] = Postscript top
+regions[postscript_bottom] = Postscript bottom
+regions[footer] = Footer
+regions[node_top] = Node top
+regions[node_bottom] = Node bottom
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
 
 features[] = logo
 features[] = name
@@ -111,23 +33,59 @@ features[] = slogan
 features[] = node_user_picture
 features[] = comment_user_picture
 features[] = favicon
-features[] = main_menu
-features[] = secondary_menu
 
+; Default theme settings (override values inherited from fusion_core)
+; REMOVE THESE ONCE PATCH TO FIX SETTINGS INHERITANCE (#563708) IS IN CORE
+settings[theme_grid] = grid16-960
+settings[theme_grid_options][] = grid16-960
+settings[theme_grid_options][] = grid16-fluid
+settings[theme_grid_options][] = grid12-960
+settings[theme_grid_options][] = grid12-fluid
+settings[fluid_grid_width] = fluid-100
+settings[sidebar_layout] = sidebars-split
+settings[sidebar_first_width] = 3
+settings[sidebar_second_width] = 3
+settings[theme_font] = none
+settings[theme_font_size] = font-size-13
+settings[breadcrumb_display] = 1
+settings[search_snippet] = 1
+settings[search_info_type] = 1
+settings[search_info_user] = 1
+settings[search_info_date] = 1
+settings[search_info_comment] = 1
+settings[search_info_upload] = 1
+settings[grid_mask] = 0
 
-
-; Set the default values of settings on the theme-settings.php form.
-
-settings[zen_breadcrumb]           = yes
-settings[zen_breadcrumb_separator] = ' › '
-settings[zen_breadcrumb_home]      = 1
-settings[zen_breadcrumb_trailing]  = 1
-settings[zen_breadcrumb_title]     = 0
-settings[zen_jump_link_target]     = main-menu
-settings[zen_rebuild_registry]     = 1
-settings[zen_wireframes]           = 0
-
-; To make this sub-theme an admin theme with shortcut links next to titles,
-; uncomment the line below.
-
-;settings[shortcut_module_link]    = 1
+; Grid layout settings
+; REMOVE THESE ONCE PATCH TO FIX SETTINGS INHERITANCE (#563708) IS IN CORE
+; Nested grid regions without full-width wrappers
+settings[grid_nested_regions][] = sidebar_first
+settings[grid_nested_regions][] = sidebar_second
+settings[grid_nested_regions][] = header
+settings[grid_nested_regions][] = preface_bottom
+settings[grid_nested_regions][] = content
+settings[grid_nested_regions][] = postscript_top
+settings[grid_nested_regions][] = node_top
+settings[grid_nested_regions][] = node_bottom
+settings[grid_nested_regions][] = help
+; Nested region width adjustments: adjacent regions to subtract for correct region width
+settings[grid_adjusted_regions][preface_bottom][] = sidebar_first
+settings[grid_adjusted_regions][help][] = sidebar_first
+settings[grid_adjusted_regions][help][] = sidebar_second
+settings[grid_adjusted_regions][content][] = sidebar_first
+settings[grid_adjusted_regions][content][] = sidebar_second
+settings[grid_adjusted_regions][node_top][] = sidebar_first
+settings[grid_adjusted_regions][node_top][] = sidebar_second
+settings[grid_adjusted_regions][node_bottom][] = sidebar_first
+settings[grid_adjusted_regions][node_bottom][] = sidebar_second
+settings[grid_adjusted_regions][postscript_top][] = sidebar_first
+; Nested group width adjustments: adjacent regions to subtract for correct group width
+settings[grid_adjusted_groups][main_group][] = sidebar_first
+settings[grid_adjusted_groups][content_group][] = sidebar_first
+settings[grid_adjusted_groups][content_group][] = sidebar_second
+; Nested region fluid width adjustments: regions outside a parent group to subtract to get correct parent width
+settings[grid_adjusted_regions_fluid][sidebar_second][] = sidebar_first
+settings[grid_adjusted_regions_fluid][content][] = sidebar_first
+settings[grid_adjusted_regions_fluid][content][] = sidebar_second
+; Nested group fluid width adjustments: regions inside a parent group to subtract to get remaining width
+settings[grid_adjusted_groups_fluid][content_group][] = sidebar_second
