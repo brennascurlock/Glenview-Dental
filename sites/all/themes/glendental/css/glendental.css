@@ -3,7 +3,21 @@
 -------------------------------------------------------------- */
 /* Add general site styling here for typography and background */
 body {
-  font-size: 75%;   /* also set in fusion_starter.info: settings[base-font-size] = font-size-12 */
+  font-size: 75%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  /* also set in fusion_starter.info: settings[base-font-size] = font-size-12 */
+}
+
+h1{
+  color: rgb(57, 83, 179);
+}
+
+h2{
+  margin-top:15px;
+}
+
+.content ul li{
+
 }
 
 /* Default link styles - separate a:visited for a different visited link style */
@@ -36,6 +50,7 @@ a:active {
 /* HTML Elements
 -------------------------------------------------------------- */
 body {
+  margin-top:20px;
 }
 
 /* Site Info
@@ -89,9 +104,13 @@ body {
 /* Header Top region to the bottom of Header region */
 /* For full-width header background, add background image/color here */
 .header-group-wrapper {
+  
 }
 
 .header-group {
+  background-image: url('smile-header2.jpg');
+  background-repeat: no-repeat;
+  background-position: center left;
 }
 
 /* Header Top region which sits above the header */
@@ -99,7 +118,8 @@ body {
 .header-top-wrapper {
 }
 
-.header-top {
+.header-top ul li {
+  display: inline;
 }
 
 
@@ -107,7 +127,28 @@ body {
 /-------------------------------------------------------------- */
 /* Add general styles for main menu here, such as typography, borders, floats,
   or spacing above/below */
+ul.menu {
+  margin:0 auto;
+
+}
+
+ul.menu li{
+  font-size:14px;
+  font-weight:bold;
+  border-right: 2px solid gray;
+}
+
+ul.menu li.last{
+  border-right: 0px;
+}
+
+ul.menu li a{
+  padding: 10px 20px 10px 20px;
+  color:black;
+}
+
 .main-menu {
+  
 }
 
 /* styles for Superfish main menu */
