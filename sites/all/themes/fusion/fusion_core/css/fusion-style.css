@@ -33,7 +33,11 @@ li ul, li ol {
 }
 
 ul {
-  list-style-type: disc;
+  list-style-type: none;
+}
+
+ul > ul {
+  list-style-type: none;
 }
 
 ol {
