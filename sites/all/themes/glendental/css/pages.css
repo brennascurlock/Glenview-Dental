@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #A62A2A;
+  background-image: url('argyle2.png');
 }
 
 #page-wrapper {
@@ -24,7 +25,7 @@ body {
 #page {
   background-color: #FFF8DC;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  
+  margin-top:20px;
 }
 
 /*
@@ -52,10 +53,7 @@ body {
 }
 
 #header .content{
-  padding-top:10px;
-  background-image: url('smile-header2.png');
-  background-repeat: no-repeat;
-  background-position: top left;
+  
 }
 
 #logo /* Wrapping link for logo */ {

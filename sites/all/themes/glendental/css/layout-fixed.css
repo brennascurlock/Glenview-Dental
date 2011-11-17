@@ -36,13 +36,16 @@ body {
 }
 
 #page {
-  margin-top:20px;
+
 }
 
 /*
  * Header
  */
-#header {
+.header-image{
+  background-image: url('smile-header2.png');
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 #header .section {
@@ -80,9 +83,9 @@ body {
 }
 
 .sidebar-second #content {
-  width: 760px;
+  width: 480px;
   margin-left: 0; /* LTR */
-  margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
+  margin-right: -480px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
 .two-sidebars #content {
@@ -95,6 +98,7 @@ body {
   margin: 0;
   padding: 0px 20px 10px 20px;
 }
+
 
 /*
  * Navigation
@@ -140,8 +144,8 @@ body {
  */
 .region-sidebar-second {
   float: left; /* LTR */
-  width: 200px;
-  margin-left: 760px; /* LTR */ /* Width of content + sidebar-first. */
+  width: 480px;
+  margin-left: 480px; /* LTR */ /* Width of content + sidebar-first. */
   margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
 }
