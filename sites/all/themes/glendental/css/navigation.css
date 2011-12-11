@@ -16,8 +16,7 @@ li a.active {
  */
 #navigation {
   /* overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
-  background-color: #A62A2A;
-  padding:5px 0px 5px 5px;
+  padding:20px 0px 5px 30px;
 }
 
 #navigation ul.links, /* Main menu and secondary menu links */
@@ -34,12 +33,11 @@ li a.active {
   list-style-type: none;
   list-style-image: none;
   font-size:125%;
-  font-weight:bold;
   padding-right:20px;
 }
 
 #navigation li a{
-  color:#FFF8DC;
+  color:#242424;
   text-decoration:none;
   padding-bottom:10px;
 }

@@ -14,8 +14,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #A62A2A;
-  background-image: url('argyle2.png');
+  background-color: #CDCDCD;
+  /*background-image: url('background-texture.jpg');*/
 }
 
 #page-wrapper {
@@ -23,11 +23,24 @@ body {
 }
 
 #page {
-  background-color: #FFF8DC;
+  background-color: #ffffff;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  margin-top:20px;
+  color: #242424;
+ -moz-box-shadow: 0 0 10px 5px #FAFAFA;
+-webkit-box-shadow: 0 0 10px 5px #FAFAFA;
+box-shadow: 0 0 10px 5px #FAFAFA;
+  
 }
 
+#page a{
+  color: #283A90;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+#footer a{
+  color: #242424;
+}
 /*
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
@@ -53,7 +66,7 @@ body {
 }
 
 #header .content{
-  
+
 }
 
 #logo /* Wrapping link for logo */ {
@@ -136,20 +149,110 @@ h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title /* Comment title */ {
   margin: 0;
-  color: rgb(57, 83, 179);
+  color: #283A90;
+  font-family: Georgia, Times NEw Roman, Times, serif;
+}
+
+ul.text-nav{
+  list-style-type:none;
+  text-align:center;
+  font-size: 125%;
+}
+
+ul.text-nav li{
+  padding-bottom:10px;
+}
+
+ul.text-nav li + li + li{
+  padding-bottom:0px;
+}
+
+#block-locationmap-image img{
+  float: right;
+  margin-right: 30px;
+}
+
+#glossary{
+  font-size: 150%;
 }
 
 #glossary li{
-  background-image: url(tooth-icon.png);
+  /*background-image: url(tooth-icon.png);
   background-repeat: no-repeat;
-  padding:0px 0px 20px 35px;
+  background-position: top left;*/
+  padding:20px;
   font-weight:bold;
+  font-size:100%;
+  list-style-type:none;
+  border:2px solid #283A90;
+  background-color: #E6E8FA;
+  margin-bottom:8px;
+  border-radius: 25px 25px;
+  -moz-border-radius: 25px 25px;
 }
 
-#glossary ul li{
+#glossary ul > li{
+  font-size: 75%;
   background-image: none;
-  padding-left:0px;
+  padding:10px 0px 0px 0px;
   font-weight: normal;
+  list-style-type:none;
+  border:none;
+}
+
+#glossary ul ol{
+  padding-top:10px;
+}
+
+#glossary ul ul{
+  padding-top:10px;
+}
+
+#glossary ul > li > ol > li{
+  border:none;
+  font-size:90%;
+  padding:0px 20px 0px 20px;
+}
+
+#glossary ul > li > ul > li{
+  font-size:90%;
+  padding:0px 20px 0px 20px;
+}
+
+
+
+.services ul > li{
+  list-style-type:none;
+  font-size:150%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+
+.services ul > li > a{
+  color: #322F35 !important;
+  padding-right:50px;
+}
+
+.services ul > li > a:hover{
+  background-image: url('go-button.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.services ul > li > ul > li{
+  list-style-type:disc;
+  margin-left:30px;
+  font-size:75%;
+  font-weight: normal;
+  padding-bottom:8px;
+  padding-top:8px;
+}
+
+
+.services ul > li > ul > li > a{
+  font-weight: normal !important;
+  color: #322F35 !important;
+  
 }
 
 tr.even /* Some tables have rows marked even or odd. */ {

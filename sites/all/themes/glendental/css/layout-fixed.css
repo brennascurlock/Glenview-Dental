@@ -36,8 +36,9 @@ body {
 }
 
 #page {
-
+  margin:30px 0px 30px 0px;
 }
+
 
 /*
  * Header
@@ -83,9 +84,9 @@ body {
 }
 
 .sidebar-second #content {
-  width: 480px;
+  width: 760px;
   margin-left: 0; /* LTR */
-  margin-right: -480px; /* LTR */ /* Negative value of #content's width + left margin. */
+  margin-right: -760px; /* LTR */ /* Negative value of #content's width + left margin. */
 }
 
 .two-sidebars #content {
@@ -96,7 +97,7 @@ body {
 
 #content .section {
   margin: 0;
-  padding: 0px 20px 10px 20px;
+  padding: 0px 30px 10px 30px;
 }
 
 
